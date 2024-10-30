@@ -4,9 +4,10 @@ return {
     "lint", "--format=json",
     -- note: users will have to replace the --dialect argument accordingly
     "--dialect=ansi",
+    "-"
   },
   ignore_exitcode = true,
-  stdin = false,
+  stdin = true,
   parser = function(output, _)
     local per_filepath = {}
     if #output > 0 then
